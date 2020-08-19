@@ -1,0 +1,198 @@
+{
+  "status": 200,
+  "message": "success",
+  "content": {
+    "asbancStatus": "0",
+    "asbancMessage": "TRANSACCION PROCESADA OK",
+    "client": "Carlos Mansueto Fernandez",
+    "debts": [
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00058832",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00059099",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00061183",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00061184",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00061185",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "3849780",
+          "description": "Cuota 3 2020-1"
+        },
+        "dueAt": "12112020",
+        "createdAt": "05052020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "3849781",
+          "description": "Cuota 3 2020-1"
+        },
+        "dueAt": "12112020",
+        "createdAt": "05052020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "3849782",
+          "description": "Cuota 3 2020-1"
+        },
+        "dueAt": "12112020",
+        "createdAt": "05052020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00063497",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "07062020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00063498",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "07062020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      },
+      {
+        "product": "001",
+        "document": {
+          "number": "B001-00063499",
+          "description": "Cuota 1 2020-1"
+        },
+        "dueAt": "11112020",
+        "createdAt": "07062020",
+        "amount": 1000.00,
+        "arrears": 0,
+        "administrativeExpenses": 0,
+        "minimumPayment": 1000.00,
+        "period": "00",
+        "year": 2020,
+        "installment": "00",
+        "currency": "1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+<testsuite failures="0" name="src/test/java/examples/users/consulta.feature" skipped="0" tests="1" time="1.592133">
+  <testcase classname="src.test.java.examples.users.consulta" name="get debt" time="1.592133">
+    <system-out>* url 'https://api-test1.utec.net.pe' ..................................... passed
+* header Content-Type = 'application/json' ................................ passed
+Given path '/finance-api/v1/asbanc/debts/query' ........................... passed
+And request { "product":"001","queryType":1, "queryPayload": "73145859", "bank": 1012,"channel": 14,"business": "636" } . passed
+When method POST .......................................................... passed
+Then print 'response---',response ......................................... passed
+Then status 200 ........................................................... passed
+And match response contains {"message": "success"} ........................ passed
+And match response.content contains {"asbancStatus" : "0"} ................ passed
+And match response.content contains {"asbancMessage" : "TRANSACCION PROCESADA OK"} . passed
+* def Cliente = response.content.client ................................... passed
+Then print Cliente ........................................................ passed
+And assert response.content.client == Cliente ............................. passed
+And match response.message contains "success" ............................. passed
+And match response.message !contains "succss" ............................. passed
+And match response.message contains "succe" ............................... passed</system-out>
+  </testcase>
+</testsuite>

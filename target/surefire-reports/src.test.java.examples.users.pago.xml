@@ -1,0 +1,23 @@
+<testsuite failures="0" name="src/test/java/examples/users/pago.feature" skipped="0" tests="1" time="3.559252">
+  <testcase classname="src.test.java.examples.users.pago" name="Payment Operation Register" time="3.559252">
+    <system-out>* url 'https://api-test1.utec.net.pe' ..................................... passed
+* header Content-Type = 'application/json' ................................ passed
+* def feature = read('consulta.feature') .................................. passed
+* def result = call feature ............................................... passed
+* def product = result.response.content.debts[0].product .................. passed
+* def number = result.response.content.debts[0].document.number ........... passed
+* def amount = result.response.content.debts[0].amount .................... passed
+Then print amount ......................................................... passed
+Given path '/finance-api/v1/asbanc/payments/register' ..................... passed
+And request {"product": "#(product)","queryType": 1,"queryPayload": "73145859","bank": 1020,"channel": 10,"business": "636","amount": "303.36","document": "#(number)","currency": "1","date": "21052020","time": "120101","operation": "J1","type": "01"} . passed
+Then print 'response---',response ......................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response contains {"message": "success"} ........................ passed
+And match response.content contains {"asbancStatus" : "0"} ................ passed
+And match response.content contains {"asbancMessage" : "TRANSACCION PROCESADA OK"} . passed
+* def Cliente = result.response.content.client ............................ passed
+And assert result.response.content.client == Cliente ...................... passed
+Then print Cliente ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

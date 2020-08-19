@@ -1,0 +1,15 @@
+<testsuite failures="0" name="src/test/java/examples/users/users.feature" skipped="0" tests="1" time="2.111242">
+  <testcase classname="src.test.java.examples.users.users" name="get debt" time="2.111242">
+    <system-out>* url 'https://api-test1.utec.net.pe' ..................................... passed
+* header Content-Type = 'application/json' ................................ passed
+Given path '/finance-api/v1/asbanc/debts/query' ........................... passed
+And request { "product":"001", "queryType":1, "queryPayload": "06634287", "bank": 1012,"channel": 14,"business": "636" } . passed
+And param message = 'success' ............................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+Then print 'response---',response ......................................... passed
+And match response.content.asbancStatus == "0" ............................ passed
+And match response contains {"message": "success"} ........................ passed
+And match response.message contains "success" ............................. passed</system-out>
+  </testcase>
+</testsuite>

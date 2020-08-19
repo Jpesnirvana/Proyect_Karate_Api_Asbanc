@@ -1,0 +1,27 @@
+<testsuite failures="1" name="src/test/java/examples/Example/extorno.feature" skipped="0" tests="1" time="2.687322">
+  <testcase classname="src.test.java.examples.Example.extorno" name="Payment Operation Void" time="2.687322">
+    <failure message="extorno.feature:20 - path: $.content.asbancStatus, actual: '68', expected: '0', reason: not equal">* url 'https://api-test1.utec.net.pe' ..................................... passed
+* header Content-Type = 'application/json' ................................ passed
+* def feature = read('pago.feature') ...................................... passed
+* def feature = read('consulta.feature') .................................. passed
+* def result = call feature ............................................... passed
+* def number = result.response.content.debts[0].document.number ........... passed
+Then print = number ....................................................... passed
+Given path '/finance-api/v1/asbanc/payments/void' ......................... passed
+And request {"queryType": 1,"queryPayload": "73145859","document": "#(number)","date": "19072020","time": "121330","bank": 1020,"operation": "J1","business": "636"} . passed
+Then print 'response---',response ......................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response contains {"message": "success"} ........................ passed
+And match response.content contains {"asbancStatus" : "0"} ................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: extorno.feature:20 - path: $.content.asbancStatus, actual: '68', expected: '0', reason: not equal
+	at ✽.And match response.content contains {"asbancStatus" : "0"} (extorno.feature:20)
+
+And match response.content contains {"asbancMessage" : "TRANSACCION PROCESADA OK"} . skipped
+* def Cliente = result.response.content.client ............................ skipped
+And assert result.response.content.client == Cliente ...................... skipped
+Then print Cliente ........................................................ skipped</failure>
+  </testcase>
+</testsuite>

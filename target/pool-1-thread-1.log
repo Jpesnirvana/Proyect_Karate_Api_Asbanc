@@ -1,0 +1,121 @@
+15:06:21.061 karate.env system property was:  
+15:06:21.480 request:
+1 > POST https://api-test1.utec.net.pe/finance-api/v1/asbanc/debts/query
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: api-test1.utec.net.pe
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_241)
+{"product":"001","queryType":1,"queryPayload":"73145859","bank":1012,"channel":14,"business":"636"}
+
+15:06:22.714 response time in milliseconds: 1233.21
+1 < 200
+1 < Access-Control-Allow-Headers: Origin, x-requested-with,Content-Type,Accept, authorization,X-UTEC-CONSUMER-ID,X-Auth-Token,X-UTEC-REQUEST-ID
+1 < Access-Control-Allow-Methods: POST,PUT, GET, OPTIONS, DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Max-Age: 3600
+1 < Connection: keep-alive
+1 < Content-Length: 964
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 31 Aug 2020 20:06:22 GMT
+1 < Server: nginx
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 < X-UTEC-REQUEST-ID: 54554a7f-d7d4-4b43-ae8c-91734d48c92d
+{
+	"status":200,
+	"message":"success","content":{"asbancStatus":"0","asbancMessage":"TRANSACCION PROCESADA OK","client":"Gabriela Cristina Garayar","debts":[{"product":"001","document":{"number":"B001-00057551","description":"Cuota 3 2020-1"},"dueAt":"31052020","createdAt":"27052020","amount":303.36,"arrears":0,"administrativeExpenses":0,"minimumPayment":303.36,"period":"00","year":2020,"installment":"00","currency":"1"},{"product":"001","document":{"number":"B001-00057552","description":"Cuota 4 2020-1"},"dueAt":"30062020","createdAt":"27052020","amount":303.36,"arrears":0,"administrativeExpenses":0,"minimumPayment":303.36,"period":"00","year":2020,"installment":"00","currency":"1"},{"product":"001","document":{"number":"B001-00057553","description":"Cuota 5 2020-1"},"dueAt":"31072020","createdAt":"27052020","amount":303.36,"arrears":0,"administrativeExpenses":0,"minimumPayment":303.36,"period":"00","year":2020,"installment":"00","currency":"1"}]}
+}
+
+15:06:22.718 [print] response--- {
+  "message": "success",
+  "content": {
+    "debts": [
+      {
+        "dueAt": "31052020",
+        "createdAt": "27052020",
+        "product": "001",
+        "amount": 303.36,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00057551",
+          "description": "Cuota 3 2020-1"
+        },
+        "minimumPayment": 303.36,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "30062020",
+        "createdAt": "27052020",
+        "product": "001",
+        "amount": 303.36,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00057552",
+          "description": "Cuota 4 2020-1"
+        },
+        "minimumPayment": 303.36,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "31072020",
+        "createdAt": "27052020",
+        "product": "001",
+        "amount": 303.36,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00057553",
+          "description": "Cuota 5 2020-1"
+        },
+        "minimumPayment": 303.36,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      }
+    ],
+    "asbancMessage": "TRANSACCION PROCESADA OK",
+    "client": "Gabriela Cristina Garayar",
+    "asbancStatus": "0"
+  },
+  "status": 200
+}
+
+15:06:22.726 [print] Gabriela Cristina Garayar
+12:49:32.848 [print] 001
+ POST https://api-test1.utec.net.pe/finance-api/v1/asbanc/payments/void?message=success
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 149
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: api-test1.utec.net.pe
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_241)
+{"queryType":1,"queryPayload":"71011069","document":"B001-00057781","date":"21072020","time":"121330","bank":1020,"operation":"OP5","business":"636"}
+
+12:32:15.157 response time in milliseconds: 1283.82
+1 < 200
+1 < Access-Control-Allow-Headers: Origin, x-requested-with,Content-Type,Accept, authorization,X-UTEC-CONSUMER-ID,X-Auth-Token,X-UTEC-REQUEST-ID
+1 < Access-Control-Allow-Methods: POST,PUT, GET, OPTIONS, DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Max-Age: 3600
+1 < Connection: keep-alive
+1 < Content-Length: 164
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 31 Aug 2020 17:32:15 GMT
+1 < Server: nginx
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 < X-UTEC-REQUEST-ID: c55f6c24-bb4d-4e4e-9ad7-c349d84d11cb
+{
+	"status":200,
+	"message":"success","content":{"asbancStatus":"99","asbancMessage":"Void should be at most 10 minutes after payment","client":"","operation":""}
+}
+

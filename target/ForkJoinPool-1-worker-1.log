@@ -1,0 +1,316 @@
+17:05:56.079 karate.env system property was:  
+17:05:56.472 request:
+1 > POST https://api-test1.utec.net.pe/finance-api/v1/asbanc/debts/query
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: api-test1.utec.net.pe
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_241)
+{"product":"001","queryType":1,"queryPayload":"73145859","bank":1012,"channel":14,"business":"636"}
+
+17:05:57.714 response time in milliseconds: 1239.99
+1 < 200
+1 < Access-Control-Allow-Headers: Origin, x-requested-with,Content-Type,Accept, authorization,X-UTEC-CONSUMER-ID,X-Auth-Token,X-UTEC-REQUEST-ID
+1 < Access-Control-Allow-Methods: POST,PUT, GET, OPTIONS, DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Max-Age: 3600
+1 < Connection: keep-alive
+1 < Content-Length: 428
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 31 Aug 2020 22:05:57 GMT
+1 < Server: nginx
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 < X-UTEC-REQUEST-ID: 78c68043-4d16-454e-a3ef-55018b0cbc45
+{
+	"status":200,
+	"message":"success","content":{"asbancStatus":"0","asbancMessage":"TRANSACCION PROCESADA OK","client":"Gabriela Cristina Garayar","debts":[{"product":"001","document":{"number":"B001-00057551","description":"Cuota 3 2020-1"},"dueAt":"31052020","createdAt":"27052020","amount":303.36,"arrears":0,"administrativeExpenses":0,"minimumPayment":303.36,"period":"00","year":2020,"installment":"00","currency":"1"}]}
+}
+
+17:05:57.717 [print] response--- {
+  "message": "success",
+  "content": {
+    "debts": [
+      {
+        "dueAt": "31052020",
+        "createdAt": "27052020",
+        "product": "001",
+        "amount": 303.36,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00057551",
+          "description": "Cuota 3 2020-1"
+        },
+        "minimumPayment": 303.36,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      }
+    ],
+    "asbancMessage": "TRANSACCION PROCESADA OK",
+    "client": "Gabriela Cristina Garayar",
+    "asbancStatus": "0"
+  },
+  "status": 200
+}
+
+17:05:57.725 [print] Gabriela Cristina Garayar
+17:05:57.750 [print]
+17:05:57.756 [print] response---
+17:05:57.758 request:
+1 > POST https://api-test1.utec.net.pe/finance-api/v1/asbanc/payments/void
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 148
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: api-test1.utec.net.pe
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_241)
+{"queryType":1,"queryPayload":"73145859","document":"B001-00057551","date":"19072020","time":"121330","bank":1020,"operation":"J1","business":"636"}
+
+17:05:58.809 response time in milliseconds: 1050.72
+1 < 200
+1 < Access-Control-Allow-Headers: Origin, x-requested-with,Content-Type,Accept, authorization,X-UTEC-CONSUMER-ID,X-Auth-Token,X-UTEC-REQUEST-ID
+1 < Access-Control-Allow-Methods: POST,PUT, GET, OPTIONS, DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Max-Age: 3600
+1 < Connection: keep-alive
+1 < Content-Length: 145
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 31 Aug 2020 22:05:58 GMT
+1 < Server: nginx
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 < X-UTEC-REQUEST-ID: 02e3f63b-c3c9-4cfc-b285-5a2ad5964f74
+{
+	"status":200,
+	"message":"success","content":{"asbancStatus":"68","asbancMessage":"TXN ORIG. A ANULAR NO EXISTE","client":"","operation":""}
+}
+
+17:05:58.810 assertion failed: path: $.content.asbancStatus, actual: '68', expected: '0', reason: not equal
+16:20:51.845 [print] Gabriela Cristina Garayar
+rization,X-UTEC-CONSUMER-ID,X-Auth-Token,X-UTEC-REQUEST-ID
+1 < Access-Control-Allow-Methods: POST,PUT, GET, OPTIONS, DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Max-Age: 3600
+1 < Connection: keep-alive
+1 < Content-Length: 168
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 31 Aug 2020 21:18:41 GMT
+1 < Server: nginx
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 < X-UTEC-REQUEST-ID: 3431fd52-bb3b-4228-a4d0-09a8b4d683ec
+{
+	"status":200,
+	"message":"success","content":{"asbancStatus":"0","asbancMessage":"TRANSACCION PROCESADA OK","client":"Gabriela Cristina Garayar","operation":"703"}
+}
+
+e: {"message":"Unhandled error","status":99}
+D,X-Auth-Token,X-UTEC-REQUEST-ID
+1 < Access-Control-Allow-Methods: POST,PUT, GET, OPTIONS, DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Max-Age: 3600
+1 < Connection: keep-alive
+1 < Content-Length: 168
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 31 Aug 2020 20:31:29 GMT
+1 < Server: nginx
+1 < Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 < X-UTEC-REQUEST-ID: 62642cc1-dd49-4d9a-b712-27552438ffae
+{
+	"status":200,
+	"message":"success","content":{"asbancStatus":"0","asbancMessage":"TRANSACCION PROCESADA OK","client":"Gabriela Cristina Garayar","operation":"701"}
+}
+
+r","operation":"699"}
+}
+
+   "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00061183",
+          "description": "Cuota 1 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00061184",
+          "description": "Cuota 1 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "11112020",
+        "createdAt": "06072020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00061185",
+          "description": "Cuota 1 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "11112020",
+        "createdAt": "07062020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00063497",
+          "description": "Cuota 1 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "11112020",
+        "createdAt": "07062020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00063498",
+          "description": "Cuota 1 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "11112020",
+        "createdAt": "07062020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "B001-00063499",
+          "description": "Cuota 1 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "12112020",
+        "createdAt": "05052020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "3849780",
+          "description": "Cuota 3 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "12112020",
+        "createdAt": "05052020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "3849781",
+          "description": "Cuota 3 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      },
+      {
+        "dueAt": "12112020",
+        "createdAt": "05052020",
+        "product": "001",
+        "amount": 1000.0,
+        "period": "00",
+        "arrears": 0,
+        "year": 2020,
+        "document": {
+          "number": "3849782",
+          "description": "Cuota 3 2020-1"
+        },
+        "minimumPayment": 1000.0,
+        "installment": "00",
+        "currency": "1",
+        "administrativeExpenses": 0
+      }
+    ],
+    "asbancMessage": "TRANSACCION PROCESADA OK",
+    "client": "Carlos Mansueto Fernandez",
+    "asbancStatus": "0"
+  },
+  "status": 200
+}
+
+17:10:48.303 assertion failed: path: $.message, actual: 'success', NOT expected: 'success', reason: does contain expected
+1","001","001","001"], expected: 1, reason: actual value does not contain expected
+{"number":"B001-00058832","description":"Cuota 1 2020-1"},"minimumPayment":1000.0,"installment":"00","currency":"1","administrativeExpenses":0}, expected: {product=002, document={number=B001-00058832, description=Cuota 1 2020-1}, dueAt=11112020, createdAt=06072020, amount=1000.0, arrears=0, administrativeExpenses=0, minimumPayment=1000.0, period=00, year=2020, installment=00, currency=1}, reason: [path: $.content.debts[0].product, actual: '001', expected: '002', reason: not equal]
+ Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+1 < X-Ratelimit-Limit: 1000
+1 < X-Ratelimit-Remaining: 999
+1 < X-Ratelimit-Reset: 1594045503
+1 < cf-request-id: 03c61d25510000d4eddea97200000001
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+09:27:40.513 [print] created id is:  11
